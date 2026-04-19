@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VibeList — todos that slap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scene" aria-hidden="true">
+      <div class="aurora"></div>
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+      <div class="glow glow--1"></div>
+      <div class="glow glow--2"></div>
+      <div class="glow glow--3"></div>
+      <div class="vignette"></div>
+    </div>
+
+    <main class="shell">
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="guide.html">Guide</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+
+      <header class="hero">
+        <p class="badge">✦ Build in arunil's laptop · run in browser</p>
+        <h1 class="title">
+          <span class="title__line">Vibe</span>
+          <span class="title__line title__line--accent">List</span>
+        </h1>
+        <p class="tagline">Today’s tasks, one clean place — full aesthetic energy.</p>
+      </header>
+
+      <section class="panel" aria-labelledby="app-heading">
+        <h2 id="app-heading" class="visually-hidden">Todo list</h2>
+
+        <form class="composer" id="form-add" autocomplete="off">
+          <label class="visually-hidden" for="input-todo">New task</label>
+          <input
+            id="input-todo"
+            class="composer__input"
+            type="text"
+            name="todo"
+            placeholder="Type a task — gym, code, coffee break…"
+            maxlength="200"
+            required
+          />
+          <button type="submit" class="btn btn--primary">
+            <span class="btn__sheen" aria-hidden="true"></span>
+            <span class="btn__inner">
+              <span>Add</span>
+              <span class="btn__spark" aria-hidden="true">⚡</span>
+            </span>
+          </button>
+        </form>
+
+        <div class="toolbar">
+          <div class="filters" role="tablist" aria-label="Filter tasks">
+            <button type="button" class="chip chip--active" data-filter="all" role="tab" aria-selected="true">
+              All
+            </button>
+            <button type="button" class="chip" data-filter="active" role="tab" aria-selected="false">
+              Active
+            </button>
+            <button type="button" class="chip" data-filter="completed" role="tab" aria-selected="false">
+              Done
+            </button>
+          </div>
+          <button type="button" class="btn btn--ghost" id="btn-clear" title="Remove all completed tasks">
+            Clear done
+          </button>
+        </div>
+
+        <ul class="list" id="list" aria-live="polite"></ul>
+        <p class="empty" id="empty">Nothing here yet — add your first task above 🔥</p>
+      </section>
+
+      <footer class="foot">
+        <span>Made with HTML · CSS · JS — no framework drama</span>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

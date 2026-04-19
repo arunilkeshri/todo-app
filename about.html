@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — VibeList</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scene" aria-hidden="true">
+      <div class="aurora"></div>
+      <div class="grid-overlay"></div>
+      <div class="noise"></div>
+      <div class="glow glow--1"></div>
+      <div class="glow glow--2"></div>
+      <div class="glow glow--3"></div>
+      <div class="vignette"></div>
+    </div>
+
+    <main class="shell shell--wide">
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="guide.html">Guide</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+
+      <header class="page-head">
+        <h1 class="page-title"><span class="page-title--accent">About</span> VibeList</h1>
+        <p class="page-lede">A tiny, no-build todo app for learning and daily use.</p>
+      </header>
+
+      <section class="panel prose" aria-labelledby="about-what">
+        <h2 id="about-what" class="visually-hidden">What it is</h2>
+        <h3>What it is</h3>
+        <p>
+          <strong>VibeList</strong> is a browser-based checklist. You add tasks, mark them done, filter the
+          list, and clear finished items. Everything is styled to feel modern and calm — dark background,
+          glass panels, neon accents.
+        </p>
+
+        <h3>Why it exists</h3>
+        <p>
+          It is a sandbox for practicing <strong>HTML structure</strong>, <strong>CSS layout and look</strong>,
+          and <strong>vanilla JavaScript</strong> (no React, no build step). You can tweak copy, colors, or
+          behavior and see results instantly.
+        </p>
+
+        <h3>Stack</h3>
+        <ul>
+          <li>Semantic HTML and accessible labels where it matters</li>
+          <li>CSS custom properties, flexbox, and backdrop blur</li>
+          <li>One <code>app.js</code> file for state and the DOM</li>
+        </ul>
+
+        <a class="back-link" href="index.html">← Back to the app</a>
+      </section>
+
+      <footer class="foot">
+        <span>Made with HTML · CSS · JS — no framework drama</span>
+      </footer>
+    </main>
+  </body>
+</html>
